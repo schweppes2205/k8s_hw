@@ -1,4 +1,6 @@
 # Kubernetes cource homework
+## [Homework01](https://github.com/schweppes2205/k8s_hw/tree/main/hw1)
+
 Notes for me from the future:
 
 - installation on remote virtual machine (centos 8.0). no virtualization. only docker => minikube start --vm-driver=none;
