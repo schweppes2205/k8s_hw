@@ -1,5 +1,6 @@
 # Kubernetes cource homework
 ## [Homework01](https://github.com/schweppes2205/k8s_hw/tree/main/hw1)
+## [Homework02](https://github.com/schweppes2205/k8s_hw/tree/main/hw2)
 
 Notes for me from the future:
 

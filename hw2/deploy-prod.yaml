@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: prod
+  name: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: prod
+    spec:
+      containers:
+        - image: httpd
+          name: httpd
+          volumeMounts:
+            - name: httpd-index
+              mountPath: /usr/local/apache2/htdocs/
+      volumes:
+        - name: httpd-index
+          configMap:
+            name: httpd-index
+---
+apiVersion: v1
+data:
+  index.html: |
+    <body>
+        prod
+    </body>
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: httpd-index
